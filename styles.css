@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  color: #2a1e1e;
+  line-height: 1.7;
+  background:
+    radial-gradient(circle at top left, #ffd6e0 0%, transparent 40%),
+    radial-gradient(circle at bottom right, #fbc2eb 0%, transparent 45%),
+    linear-gradient(180deg, #fff1f5 0%, #fdecef 100%);
+}
+
+/* Общие секции */
+section {
+  padding: 70px 15px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding-top: 100px;
+}
+
+.hero h1 {
+  font-size: 90px;
+  margin-bottom: 20px;
+  color: #7a2e3a;
+  letter-spacing: 1px;
+}
+
+.hero p {
+  font-size: 40px;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #4a2c32;
+}
+
+/* TEXT */
+.text p {
+  font-size: 38px;
+  color: #3f2a2e;
+}
+
+/* GALLERY */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+.gallery img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+/* TOGETHER */
+.together {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+}
+
+.together img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+/* FINAL */
+.final {
+  text-align: center;
+  padding-bottom: 80px;
+}
+
+.final p {
+  font-size: 70px;
+  max-width: 700px;
+  margin: 0 auto 20px;
+  color: #4a2c32;
+}
+
+.final span {
+  font-size: 92px;
+  color: #c94b6a;
+}
+
+/* Адаптивные медиа для телефонов */
+@media (max-width: 768px) {
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero p, .text p, .final p {
+    font-size: 16px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 12px;
+  }
+
+  .gallery img {
+    border-radius: 12px;
+  }
+
+  .together {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .together img {
+    border-radius: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    padding: 50px 10px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p, .text p, .final p {
+    font-size: 15px;
+  }
+
+  .final span {
+    font-size: 36px;
+  }
+}
